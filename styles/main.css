@@ -2,88 +2,206 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  /*border: 1px solid red;*/
-}
-
-html, body {
-  height: 100%;
-}
-
-html {
-  overflow: hidden;
+  text-decoration: none;
+  outline: none;
 }
 
 body {
-  overflow-y: hidden;
+  background: #222;
 }
 
 .background {
   background-image: url("../images/mv3.jpg");
-  filter: grayscale(0%);
   background-size: cover;
   height: 100%;
+  overflow: hidden;
 }
 
+
+.main {
+  position: relative;
+  min-height: calc(100vh - 50vw);
+  text-align: center;
+  margin: 15vw;
+}
+.logo {
+  position: absolute;
+  border: 0.25vw solid white;
+  line-height: 7vw;
+  width: 70vw;
+  padding: 4.5vw 3vw;
+  padding-top: 5.5vw;
+  top: 50%;
+  left: 50%;
+  margin: -13.25vw 0 0 -35vw;
+}
+.logo h1 {
+  color: white;
+  text-align: center;
+  font-size: 12vw;
+  font-variant: small-caps;
+}
+.logo h2 {
+  color: rgba(255,255,255,0.75);
+  text-align: center;
+  font-size: 10vw;
+  font-variant: small-caps;
+  font-weight: lighter;
+  letter-spacing: 2.2vw;
+  line-height: 9vw;
+  position: relative;
+  left: -1.35vw;
+}
+.logo a {
+  color: white;
+  font-size: 6vw;
+  font-variant: small-caps;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: 14vw 0 0 -9.6vw;
+}
+
+
+div.top {
+  border: .125vw solid white;
+  width: 37.5vw;
+  margin: 0 auto;
+  line-height: 5.5vw;
+  padding: 2vw 5vw;
+  margin: 3vw auto 5vw auto;
+}
 .top h1 {
   color: white;
   text-align: center;
-  border: .125vw solid white;
-  display: inline;
   font-size: 6vw;
   font-variant: small-caps;
-  padding: 1.5vw 6vw 5vw 6vw;
-  right: 31vw;
-  top: 2vw;
-  position: absolute;
 }
-
 .top h2 {
-  color: rgba(255,255,255,.75);
-  text-align: center;
-  display: inline;
+  color: rgba(255,255,255,0.75);
   font-size: 5vw;
+  text-align: center;
   font-variant: small-caps;
-  position: absolute;
-  right: 31vw;
-  top: 9vw;
   font-weight: lighter;
   letter-spacing: 1.1vw;
+  position: relative;
+  left: -2.75vw;
 }
-
 .top a {
   color: white;
+  text-align: center;
   display: inline;
   font-size: 4vw;
   font-variant: small-caps;
-  margin-top: 2vw;
-  margin-left: 2vw;
-  text-decoration: none;
-  float: left;
-  border: none;
-  padding: 1.67vw 4vw;
+  position: absolute;
+  padding: 1vw;
+  top: 7vw;
+  left: 4.5vw;
+  transition: all 0.2s ease;
 }
+.top a:hover {
+  transition: all 0.2s ease;
+  color: rgba(225,225,225,0.75);
+}
+
+
+.grid {
+  display: grid;
+  grid-auto-rows: minmax(25vw, auto);
+  grid-gap: 3vw;
+  grid-template-columns: repeat(2, 1fr);
+  width: 85vw;
+  min-height: calc(100vh - 47.75vw);
+  margin: 5vw auto;
+}
+.grid a {
+  display: flex;
+  align-items: flex-end;
+  border-radius: 3%;
+  letter-spacing: 1vw;
+  border: 0.25vw solid white;
+  transition: all 0.2s ease;
+}
+.grid a:hover {
+  transition: all 0.2s ease;
+  filter: contrast(0.75) brightness(0.75);
+}
+.grid a:nth-child(1) {
+  grid-column: 1;
+  grid-row: 1;
+  background: url('../images/states/arizona.jpg');
+  background-size: cover;
+  background-position: center;
+}
+.grid a:nth-child(2) {
+  grid-column: 2;
+  grid-row: 1;
+  background: url('../images/states/california.jpg');
+  background-size: cover;
+  background-position: center;
+}
+.grid a:nth-child(3) {
+  grid-column: 1;
+  grid-row: 2;
+  background: url('../images/states/colorado.jpg');
+  background-size: cover;
+  background-position: center;
+}
+.grid a:nth-child(4) {
+  grid-column: 2;
+  grid-row: 2;
+  background: url('../images/states/nevada.jpg');
+  background-size: cover;
+  background-position: center;
+}
+.grid a:nth-child(5) {
+  grid-column: 1;
+  grid-row: 3;
+  background: url('../images/states/new mexico.jpg');
+  background-size: cover;
+  background-position: center;
+}
+.grid a:nth-child(6) {
+  grid-column: 2;
+  grid-row: 3;
+  background: url('../images/states/oklahoma.jpg');
+  background-size: cover;
+  background-position: center;
+}
+.grid a:nth-child(7) {
+  grid-column: 1;
+  grid-row: 4;
+  background: url('../images/states/texas.jpg');
+  background-size: cover;
+  background-position: center;
+}
+.grid a:nth-child(8) {
+  grid-column: 2;
+  grid-row: 4;
+  background: url('../images/states/utah.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
 
 .content {
-  background-color: rgba(0,0,0,.7);
-  width: 90vw;
+  background: rgba(34,34,34,0.5);
+  width: 85vw;
   border-radius: 3%;
-  position: absolute;
-  top: 25vw;
-  bottom: 22.5vw;
-  left: 5vw;
+  margin: 5vw auto;
+  min-height: calc(100vh - 47.75vw);
+  border: 0.25vw solid white;
 }
-
 .content h1 {
   color: white;
   display: inline;
   font-size: 10vw;
   font-variant: small-caps;
-  position: relative;
-  top: 2vw;
-  left: 3vw;
 }
-
-.content p {
+.content img {
+  width: 25vw;
+}
+.content h2 {
   color: white;
   font-size: 6vw;
   font-variant: small-caps;
@@ -91,97 +209,6 @@ body {
   text-align: center;
 }
 
-.main {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-}
-
-.main h1 {
-  color: white;
-  text-align: center;
-  border: .25vw solid white;
-  display: inline;
-  font-size: 12vw;
-  font-variant: small-caps;
-  padding: 3vw 12vw 10vw 12vw;
-}
-
-.main h2 {
-  color: rgba(255,255,255,.75);
-  text-align: center;
-  display: inline;
-  font-size: 10vw;
-  font-variant: small-caps;
-  position: relative;
-  left: 1vw;
-  bottom: 14.5vw;
-  font-weight: lighter;
-  letter-spacing: 2.2vw;
-}
-
-.main a {
-  color: white;
-  display: inline;
-  font-size: 6vw;
-  font-variant: small-caps;
-  margin-top: 1vw;
-  text-decoration: none;
-  transition: all .1s ease-in;
-  position: relative;
-  bottom: 12vw;
-}
-
-.main a:hover {
-  transition: all .1s ease-in;
-  color: rgba(225,225,225,.75);
-}
-
-.grid {
-  display: grid;
-  grid-auto-rows: minmax(20vw, auto);
-  grid-gap: 3vw;
-  grid-template-columns: repeat(6, 1fr);
-  width: 90vw;
-  position: absolute;
-  left: 5vw;
-  margin-top: 2.5vw;
-}
-
-.grid a {
-  display: flex;
-  align-items: flex-end;
-  color: white;
-  font-size: 4vw;
-  margin-top: 0;
-  /*background-color: rgba(0,0,0,.7);*/
-  background: url('../images/mv3.jpg');
-  background-size: cover;
-  border-radius: 3%;
-  position: relative;
-  top: 0;
-  letter-spacing: 1vw;
-  border: 0.25vw solid white;
-}
-
-.grid a:nth-child(1) {
-  grid-column: span 3;
-  grid-row: span 2;
-}
-.grid a:nth-child(2) {
-  grid-column: span 3;
-  grid-row: span 2;
-}
-.grid a:nth-child(3) {
-  grid-column: span 3;
-  grid-row: span 2;
-}
-.grid a:nth-child(4) {
-  grid-column: span 3;
-  grid-row: span 2;
-}
 
 .footer {
   font-size: 3vw;
@@ -189,23 +216,17 @@ body {
   font-family: Helvetica, sans-serif;
   color: white;
   background-color: #222;
-  line-height: .8em;
-  width: 100%;
-  padding: .75em 0;
-  position: absolute;
-  bottom: 0;
+  padding: 2vw 0;
+  overflow: hidden;
 }
-
 .social {
-  margin-top: .5vw;
-  margin-bottom: 3vw;
+  margin-top: 1vw;
+  margin-bottom: 2vw;
 }
-
 .social a {
   color: white;
   text-decoration: none;
 }
-
 .social img {
   width: 10vw;
   margin: 0 .5vw;
